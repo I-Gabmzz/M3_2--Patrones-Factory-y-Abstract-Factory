@@ -10,7 +10,6 @@ public class SimuladorCombate {
 
         System.out.println();
         System.out.println("¡COMBATE DE PRUEBA!");
-        System.out.println(personaje.getNombre() + " ataca a un " + goblin.getNombre() + "...");
 
         if (personaje.getArma() != null) {
             personaje.getArma().usar(personaje, goblin);
