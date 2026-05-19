@@ -7,11 +7,13 @@ import dominio.equipamiento.EspadaFuegoInfernal;
 
 public class FabricaDemoniaca implements FabricaEquipamiento {
 
+    // Abstract Factory: crea el arma correspondiente a la familia demoníaca.
     @Override
     public Arma crearArma() {
         return new EspadaFuegoInfernal();
     }
 
+    // Abstract Factory: crea la armadura correspondiente a la misma temática.
     @Override
     public Armadura crearArmadura() {
         return new ArmaduraEscamasDragon();

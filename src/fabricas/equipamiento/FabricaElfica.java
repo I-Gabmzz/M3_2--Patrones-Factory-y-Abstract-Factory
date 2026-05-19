@@ -7,11 +7,13 @@ import dominio.equipamiento.TunicaHojasArbol;
 
 public class FabricaElfica implements FabricaEquipamiento {
 
+    // Abstract Factory: crea el arma correspondiente a la familia élfica.
     @Override
     public Arma crearArma() {
         return new ArcoLargoElfico();
     }
 
+    // Abstract Factory: crea la armadura correspondiente a la misma temática.
     @Override
     public Armadura crearArmadura() {
         return new TunicaHojasArbol();

@@ -8,10 +8,14 @@ import fabricas.equipamiento.FabricaEquipamiento;
 public class EquipadorPersonaje {
 
     public void equipar(Personaje personaje, FabricaEquipamiento fabricaEquipamiento) {
+        // Se crean arma y armadura desde la misma fábrica para mantener la temática.
         Arma arma = fabricaEquipamiento.crearArma();
         Armadura armadura = fabricaEquipamiento.crearArmadura();
 
+        // Se equipa al personaje con los objetos creados por Abstract Factory.
         personaje.equipar(arma, armadura);
+
+        // Se aplica el bonus de estadística definido por la temática seleccionada.
         personaje.aplicarBonus(
                 fabricaEquipamiento.getEstadisticaBonus(),
                 fabricaEquipamiento.getValorBonus()

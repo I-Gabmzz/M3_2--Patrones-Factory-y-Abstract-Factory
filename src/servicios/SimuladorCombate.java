@@ -11,12 +11,14 @@ public class SimuladorCombate {
         System.out.println();
         System.out.println("¡COMBATE DE PRUEBA!");
 
+        // Si el personaje tiene un arma equipada, se utiliza el comportamiento propio del arma.
         if (personaje.getArma() != null) {
             personaje.getArma().usar(personaje, goblin);
         } else {
             personaje.atacar(goblin);
         }
 
+        // Se muestra el resultado final del combate de prueba.
         if (goblin.estaVivo()) {
             System.out.println(goblin.getNombre() + " sobrevivió con " + goblin.getVida() + " puntos de vida.");
         } else {
