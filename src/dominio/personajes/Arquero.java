@@ -5,14 +5,18 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Arquero extends PersonajeBase {
 
     public Arquero(String nombre) {
+        this(nombre, generarPunteria());
+    }
+
+    private Arquero(String nombre, int punteria) {
         super(
                 nombre,
                 "Arquero",
                 100,
                 "Puntería",
-                generarPunteria(),
+                punteria,
                 "Puntería",
-                0
+                punteria
         );
     }
 
